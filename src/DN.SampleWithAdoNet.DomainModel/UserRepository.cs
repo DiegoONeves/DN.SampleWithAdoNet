@@ -31,7 +31,7 @@ namespace DN.SampleWithAdoNet.DomainModel
         {
             using (var command = _context.CreateCommand())
             {
-                command.CommandText = @"UPDATE USER SET NAME = @NAME, EMAIL = @EMAIL WHERE ID = @ID";
+                command.CommandText = @"UPDATE [dbo].[USER] SET NAME = @NAME, EMAIL = @EMAIL WHERE ID = @ID";
                 command.AddParameter("ID", user.Id);
                 command.AddParameter("NAME", user.Name);
                 command.AddParameter("EMAIL", user.Email);

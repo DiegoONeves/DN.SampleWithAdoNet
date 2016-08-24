@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DN.SampleWithAdoNet.Web.Models
 {
-    public class UserEditedViewModel
+    public class UserViewModel
     {
         public Guid Id { get; set; }
         [Required]

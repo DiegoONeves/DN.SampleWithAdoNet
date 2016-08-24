@@ -125,8 +125,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserEditedViewModel.cs" />
-    <Compile Include="Models\UserCreatedViewModel.cs" />
+    <Compile Include="Models\UserUpdateViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Models\UserNewViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

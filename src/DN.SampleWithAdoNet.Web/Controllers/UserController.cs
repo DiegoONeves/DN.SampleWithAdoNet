@@ -24,10 +24,10 @@ namespace DN.SampleWithAdoNet.Web.Controllers
         {
             var users = userRepo.ListAll();
 
-            var viewModel = new List<UserCreatedViewModel>();
+            var viewModel = new List<UserViewModel>();
             foreach (var item in users)
             {
-                viewModel.Add(new UserCreatedViewModel
+                viewModel.Add(new UserViewModel
                 {
                     Id = item.Id,
                     Name = item.Name,
@@ -70,7 +70,7 @@ namespace DN.SampleWithAdoNet.Web.Controllers
         public ActionResult Edit(Guid id)
         {
             var userDomain = userRepo.GetById(id);
-            var userViewModel = new UserEditedViewModel();
+            var userViewModel = new UserUpdateViewModel();
             userViewModel.Id = userDomain.Id;
             userViewModel.Name = userDomain.Name;
             userViewModel.Email = userDomain.Email;
@@ -80,7 +80,7 @@ namespace DN.SampleWithAdoNet.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(UserEditedViewModel userViewModel)
+        public ActionResult Edit(UserUpdateViewModel userViewModel)
         {
             if (ModelState.IsValid)
             {
