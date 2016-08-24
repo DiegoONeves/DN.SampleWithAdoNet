@@ -1,0 +1,19 @@
+USE master
+
+GO
+
+CREATE DATABASE SampleWithAdoNetDB 
+
+GO 
+
+USE SampleWithAdoNetDB
+
+GO
+
+CREATE TABLE [dbo].[USER]
+(
+   [ID] VARCHAR(500),
+   [NAME] VARCHAR(255),
+   [EMAIL] VARCHAR(255),
+   [PASSWORD] VARCHAR(255)
+)
